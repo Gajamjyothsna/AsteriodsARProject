@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9067906356277126138}
   - component: {fileID: 2065228017175564048}
+  - component: {fileID: 1281432661879428467}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Enemy
@@ -47,6 +48,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjectName: Player
   randomOffset: {x: 1, y: 1, z: 1}
+--- !u!114 &1281432661879428467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719999425964859691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153094628e7ca104fab9fa708db37328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1.1
 --- !u!1001 &272255212622411088
 PrefabInstance:
   m_ObjectHideFlags: 0
