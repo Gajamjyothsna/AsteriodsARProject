@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DestroyObject : MonoBehaviour
+namespace AsteriodsARGame
 {
-    #region Private Variables
-    [SerializeField] private float delay;
-    private UnityEvent OnDestroy;
-    #endregion
-
-    #region Public Methods
-    public void DestroyGameObjectWithDelay()
+    public class DestroyObject : MonoBehaviour
     {
-        //Destroying the gameobject after delay
-        OnDestroy?.Invoke();
-        Destroy(this.gameObject, delay);
+        #region Private Variables
+        [SerializeField] private float delay;
+        private UnityEvent OnDestroy;
+        #endregion
+
+        #region Public Methods
+        public void DestroyGameObjectWithDelay()
+        {
+            //Destroying the gameobject after delay
+            OnDestroy?.Invoke();
+            Destroy(this.gameObject, delay);
+        }
+        #endregion
     }
-    #endregion
 }

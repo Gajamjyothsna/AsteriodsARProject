@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+namespace AsteriodsARGame
 {
-    [SerializeField] private float moveSpeed;
-    private Transform myTransform;
-
-    private void Start()
+    public class MoveForward : MonoBehaviour
     {
-        myTransform = this.transform;
-    }
+        [SerializeField] private float moveSpeed;
+        private Transform myTransform;
 
-    private void Update()
-    {
-        myTransform.position+= myTransform.forward * (moveSpeed * Time.deltaTime);
+        private void Start()
+        {
+            myTransform = this.transform;
+        }
+
+        private void Update()
+        {
+            myTransform.position += myTransform.forward * (moveSpeed * Time.deltaTime);
+        }
     }
 }
