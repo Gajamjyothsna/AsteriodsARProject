@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3327714414784102605}
   - component: {fileID: 9145815106614354992}
   - component: {fileID: 1092253739580599425}
+  - component: {fileID: 727719524874556082}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Enemy
@@ -107,7 +108,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -126,6 +127,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 727719524874556082}
+        m_TargetAssemblyTypeName: AsteriodsARGame.CreateObject, Assembly-CSharp
+        m_MethodName: CreateNewObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1092253739580599425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +155,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayTime: 60
+--- !u!114 &727719524874556082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678582789063298545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ee34fd52eb5a34b9985ab60c682985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 3719999425964859691, guid: 53dea5a923433354abb6ce0d81d5dce2,
+    type: 3}
+  _useSpawnPoint: 0
+  _chance: 1
+  _referenceObjectRotation: {fileID: 0}
+  _amountOfObjects: 2
+  _randomizeInitialPositon: 1
+  _xRandomizationFactor: 1
+  _yRandomizationFactor: 1
+  _zRandomizationFactor: 0
 --- !u!1001 &4521501416283503775
 PrefabInstance:
   m_ObjectHideFlags: 0

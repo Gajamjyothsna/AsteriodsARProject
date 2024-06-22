@@ -9,7 +9,7 @@ namespace AsteriodsARGame
     {
         #region Private Variables
         [SerializeField] private float delay;
-        private UnityEvent OnDestroy;
+        [SerializeField] private UnityEvent OnDestroy;
         #endregion
 
         #region Public Methods

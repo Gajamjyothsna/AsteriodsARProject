@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7161756524996580520}
   - component: {fileID: 2053833655513330115}
   - component: {fileID: 1405258498297486832}
+  - component: {fileID: 2022535466031667793}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Enemy
@@ -80,7 +81,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -126,6 +127,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022535466031667793}
+        m_TargetAssemblyTypeName: AsteriodsARGame.CreateObject, Assembly-CSharp
+        m_MethodName: CreateNewObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1405258498297486832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +154,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a92557762ef804886bf41adedd409d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delayTime: 1
+  _delayTime: 60
+--- !u!114 &2022535466031667793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306045703054346080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ee34fd52eb5a34b9985ab60c682985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 4678582789063298545, guid: 97c200115e5839148a9c6431cf31c114,
+    type: 3}
+  _useSpawnPoint: 0
+  _chance: 1
+  _referenceObjectRotation: {fileID: 0}
+  _amountOfObjects: 2
+  _randomizeInitialPositon: 1
+  _xRandomizationFactor: 1
+  _yRandomizationFactor: 1
+  _zRandomizationFactor: 1
 --- !u!1001 &1792363665008390025
 PrefabInstance:
   m_ObjectHideFlags: 0
