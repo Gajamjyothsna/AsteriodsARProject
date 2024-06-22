@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2870154752222228716}
   - component: {fileID: 2100841953480071831}
   - component: {fileID: 7161756524996580520}
+  - component: {fileID: 2053833655513330115}
+  - component: {fileID: 1405258498297486832}
   m_Layer: 0
   m_Name: LargeAsteroid
   m_TagString: Enemy
@@ -111,6 +113,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2053833655513330115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306045703054346080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656527dbfa9dca740a31b508546982ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+--- !u!114 &1405258498297486832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306045703054346080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a92557762ef804886bf41adedd409d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayTime: 60
 --- !u!1001 &1792363665008390025
 PrefabInstance:
   m_ObjectHideFlags: 0
