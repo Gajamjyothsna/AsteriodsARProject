@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 9145815106614354992}
   - component: {fileID: 1092253739580599425}
   - component: {fileID: 727719524874556082}
+  - component: {fileID: 8683973578378791885}
+  - component: {fileID: 4242117271934824153}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Enemy
@@ -177,6 +179,70 @@ MonoBehaviour:
   _xRandomizationFactor: 1
   _yRandomizationFactor: 1
   _zRandomizationFactor: 0
+--- !u!114 &8683973578378791885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678582789063298545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6a38b836fd316488154d26f20627ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _currentHealth: 100
+  OnReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnZeroHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9145815106614354992}
+        m_TargetAssemblyTypeName: AsteriodsARGame.DestroyObject, Assembly-CSharp
+        m_MethodName: DestroyGameObjectWithDelay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnReceiveHealth:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4242117271934824153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678582789063298545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8d766be557ed5439d452c78342ae98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damagePower: 10
+  _tagToCompare: Player
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8683973578378791885}
+        m_TargetAssemblyTypeName: AsteriodsARGame.Health, Assembly-CSharp
+        m_MethodName: ReceiveDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &4521501416283503775
 PrefabInstance:
   m_ObjectHideFlags: 0
