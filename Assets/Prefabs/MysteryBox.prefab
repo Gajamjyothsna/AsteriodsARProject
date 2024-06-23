@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2588011141229451816}
   - component: {fileID: 6304891013856063134}
   - component: {fileID: 4685092960866500151}
+  - component: {fileID: 8755594259904050599}
   m_Layer: 0
   m_Name: MysteryBox
   m_TagString: Enemy
@@ -137,6 +138,28 @@ MonoBehaviour:
   _speed: {x: 0, y: 0, z: 30}
   _randomizeInitialRotation: 0
   _randomizationFactor: 1
+--- !u!114 &8755594259904050599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873661904762055785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ee34fd52eb5a34b9985ab60c682985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 6268250947037441684, guid: 989dabf99d7e0d0498f019644a114123,
+    type: 3}
+  _useSpawnPoint: 0
+  _chance: 1
+  _referenceObjectRotation: {fileID: 0}
+  _amountOfObjects: 1
+  _randomizeInitialPositon: 0
+  _xRandomizationFactor: 1
+  _yRandomizationFactor: 1
+  _zRandomizationFactor: 1
 --- !u!1001 &4783037506416270246
 PrefabInstance:
   m_ObjectHideFlags: 0
