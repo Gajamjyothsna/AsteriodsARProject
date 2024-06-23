@@ -30,6 +30,7 @@ namespace AsteriodsARGame
         [SerializeField] private UnityEvent OnStopAttacking;
         [SerializeField] private UnityEvent OnStartAttacking;
         [SerializeField] private UnityEvent OnDie;
+        [SerializeField] private AudioSfx _ufoOnScene;
         public UFOStates CurrentState 
         { 
             get => _currentState; 
@@ -80,6 +81,7 @@ namespace AsteriodsARGame
 
         public void StartCooldown()
         {
+            _ufoOnScene.StopAudio();
             StartCoroutine(IdleRoutine());
         }
 
@@ -103,6 +105,8 @@ namespace AsteriodsARGame
             {
                 _trajectoryVectors.Add(GetNewPositionVector());
             }
+            _ufoOnScene.PlayAudio(gameObject);
+
             StartCoroutine(AttackMovement());
         }
 

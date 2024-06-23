@@ -786,6 +786,7 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
+  _ufoOnScene: {fileID: 11400000, guid: 419e443d86af9614b90c73e8235dd746, type: 2}
 --- !u!114 &852963630
 MonoBehaviour:
   m_ObjectHideFlags: 0
