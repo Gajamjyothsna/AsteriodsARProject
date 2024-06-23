@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 852963630}
   - component: {fileID: 852963631}
   - component: {fileID: 852963632}
+  - component: {fileID: 852963633}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Enemy
@@ -817,6 +818,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 852963633}
+        m_TargetAssemblyTypeName: AsteriodsARGame.CreateObject, Assembly-CSharp
+        m_MethodName: CreateNewObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c7269cbfe66c3ad43b405586fc7d503b, type: 2}
+        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
+        m_MethodName: IncreaseScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnReceiveHealth:
     m_PersistentCalls:
       m_Calls: []
@@ -864,6 +889,28 @@ MonoBehaviour:
     type: 3}
   _useSpawnPoint: 0
   _chance: 1
+  _referenceObjectRotation: {fileID: 0}
+  _amountOfObjects: 1
+  _randomizeInitialPositon: 0
+  _xRandomizationFactor: 1
+  _yRandomizationFactor: 1
+  _zRandomizationFactor: 1
+--- !u!114 &852963633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852963626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ee34fd52eb5a34b9985ab60c682985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 7873661904762055785, guid: 212e5624eb37eaa4194b6e53d354951f,
+    type: 3}
+  _useSpawnPoint: 0
+  _chance: 0.5
   _referenceObjectRotation: {fileID: 0}
   _amountOfObjects: 1
   _randomizeInitialPositon: 0
