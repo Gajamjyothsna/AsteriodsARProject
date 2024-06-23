@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 852963631}
   - component: {fileID: 852963632}
   - component: {fileID: 852963633}
+  - component: {fileID: 852963634}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Enemy
@@ -785,7 +786,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 852963634}
+        m_TargetAssemblyTypeName: AsteriodsARGame.CreateObject, Assembly-CSharp
+        m_MethodName: CreateNewObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _ufoOnScene: {fileID: 11400000, guid: 419e443d86af9614b90c73e8235dd746, type: 2}
 --- !u!114 &852963630
 MonoBehaviour:
@@ -912,6 +925,28 @@ MonoBehaviour:
     type: 3}
   _useSpawnPoint: 0
   _chance: 0.5
+  _referenceObjectRotation: {fileID: 0}
+  _amountOfObjects: 1
+  _randomizeInitialPositon: 0
+  _xRandomizationFactor: 1
+  _yRandomizationFactor: 1
+  _zRandomizationFactor: 1
+--- !u!114 &852963634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852963626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ee34fd52eb5a34b9985ab60c682985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 2395123657560735466, guid: e21b6483c966a1d41a7098de8928766c,
+    type: 3}
+  _useSpawnPoint: 0
+  _chance: 1
   _referenceObjectRotation: {fileID: 0}
   _amountOfObjects: 1
   _randomizeInitialPositon: 0
