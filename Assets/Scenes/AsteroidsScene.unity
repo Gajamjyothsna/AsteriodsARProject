@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &96211157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96211158}
+  m_Layer: 0
+  m_Name: 'UFOLaser '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96211158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96211157}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &138336788
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,12 +751,45 @@ MonoBehaviour:
   _trajectoryVectors: []
   _trajectoriesPerSpawn: 3
   _spawnDistanceFromPlayer: 20
-  _xyOffset: 0
+  _xyOffset: 2
   _movementSpeed: 2
   _cooldownMinTime: 5
   _cooldownMaxTime: 15
   _gameState: {fileID: 11400000, guid: c7269cbfe66c3ad43b405586fc7d503b, type: 2}
   _player: {fileID: 0}
+  OnStopAttacking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 852963629}
+        m_TargetAssemblyTypeName: AsteriodsARGame.UFO, Assembly-CSharp
+        m_MethodName: StartCooldown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStartAttacking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 852963629}
+        m_TargetAssemblyTypeName: AsteriodsARGame.UFO, Assembly-CSharp
+        m_MethodName: StartAttacking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &852963630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +809,19 @@ MonoBehaviour:
       m_Calls: []
   OnZeroHealth:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 852963629}
+        m_TargetAssemblyTypeName: AsteriodsARGame.UFO, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnReceiveHealth:
     m_PersistentCalls:
       m_Calls: []
@@ -1278,3 +1354,4 @@ SceneRoots:
   - {fileID: 1102455319}
   - {fileID: 1805839406}
   - {fileID: 852963627}
+  - {fileID: 96211158}
