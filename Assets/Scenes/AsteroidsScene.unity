@@ -860,6 +860,7 @@ GameObject:
   - component: {fileID: 767339470}
   - component: {fileID: 767339472}
   - component: {fileID: 767339471}
+  - component: {fileID: 767339473}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1090,6 +1091,23 @@ MonoBehaviour:
   OnDestroy:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &767339473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767339464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09190651512845d46b08ffa9883f031c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToCreate: {fileID: 8039562572355890155, guid: e46bde8f97683e948aa2267cd7d168ee,
+    type: 3}
+  _referenceObjectRotation: {fileID: 881042725833812487}
+  _spriteObject: {fileID: 881042725833812486}
+  isEnabled: 0
 --- !u!222 &809061025
 CanvasRenderer:
   m_ObjectHideFlags: 0
