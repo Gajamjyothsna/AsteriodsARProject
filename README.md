@@ -9,9 +9,9 @@ This is an Asteroids AR Project. In this game, players will be in an outer space
  ### **Scoring**
  Players will earn the following scores upon destroying the asteroids and UFO saucers:
  - SmallAsteroid = 100
- - MediumAsteroid=50
+ - MediumAsteroid = 50
  - LargeAsteroid = 20
- - UFO=100
+ - UFO = 100
 
  ### Player mechanics
  - The camera’s view is the player, with the Earth appearing behind the player.
@@ -40,7 +40,7 @@ This is an Asteroids AR Project. In this game, players will be in an outer space
  - The UFO shoots bullets towards the player.These bullets can’t be destroyed,they will always damage the player if they hit.
  - The UFO can be destroyed by bullets.
  - When a UFO is destroyed,a mysterybox will appear in the scene for 10 seconds. If the player destroys the mysterybox,this box will release a recovery 
-   HealthItem that will start moving towards the player. When this item touches the player,a small amount of player health will be gained.
+   HealthItem that will start moving towards the player. When this item touches the player, a small amount of player health will be gained.
 
  ### Userinterface
  - Healthbar indicating remaining life of Player
