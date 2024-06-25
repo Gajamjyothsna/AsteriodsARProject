@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace AsteriodsARGame
 {
@@ -49,6 +50,12 @@ namespace AsteriodsARGame
         {
             _gameOverScreen.SetActive(true);
             _finalScoreText.text = $"Score: {_gameState.Score}";
+        }
+
+        public void PlayAgain()
+        {
+            SceneManager.LoadScene("AsteroidsScene");
+            _gameState.GameOver = false;
         }
         #endregion
     }

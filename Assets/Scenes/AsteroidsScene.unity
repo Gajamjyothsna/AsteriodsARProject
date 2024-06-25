@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCollider: {fileID: 1102455320}
   gameState: {fileID: 11400000, guid: c7269cbfe66c3ad43b405586fc7d503b, type: 2}
-  spawnDelay: 1
+  spawnDelay: 20
   AsteroidPrefab: {fileID: 7306045703054346080, guid: 9b10b4168136dda4f8b983f9cb09e794,
     type: 3}
 --- !u!1 &1125729850
@@ -5880,10 +5880,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 94d1802195984854daf3096e5de8f8ea, type: 2}
-        m_TargetAssemblyTypeName: GameState, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 235358970}
+        m_TargetAssemblyTypeName: AsteriodsARGame.UIController, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
